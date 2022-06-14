@@ -25,6 +25,7 @@ body {
     font-family: var(--sofia);
     background: linear-gradient(180deg, rgba(245, 71, 72, 0.06) 0%, rgba(245, 71, 72, 0) 100%);
     background-repeat: no-repeat;
+    overflow-x: hidden;
 }
 
 p, span {
@@ -230,10 +231,32 @@ main #banner_left {
 }
 
 .cards_container .food_card {
-    max-width: 310px;
+    max-width: 350px;
     border-radius: 20px;
-    background: linear-gradient(179.69deg, transparent, #F54748 303.75%);
+    background: linear-gradient(179.69deg, transparent, hsl(360, 90%, 62%, 0.45) 303.75%);
     padding: 20px;
+    margin: 25% auto 5% auto;
+}
+
+.gradient_div{
+    width: 308px;
+    height: 308px;
+    background-image: linear-gradient(360deg, rgba(245, 71, 72, 0) 57.72%, #f547472c, #FDC55E);
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -80%;
+}
+
+.white_div{
+    width: 270px;
+    height: 270px;
+    background-image: linear-gradient(360deg, transparent 40%, #fff );
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .food_img img {
@@ -254,8 +277,8 @@ main #banner_left {
     line-height: 24px;
     border: 4px solid #fff;
     position: relative;
-    top: -60px;
-    left: 190px;
+    top: -33%;
+    left: 68%;
 }
 
 .rating, .food_img {
@@ -265,10 +288,12 @@ main #banner_left {
 }
 .rating{
     margin-top: -60px;
+    gap: 5px;
 }
 
 .food_img{
-    margin-left: 20px;
+    /*margin-left: 20px;
+    margin-top: -80%;*/
 }
 
 .people {
@@ -313,13 +338,14 @@ main #banner_left {
 .about_container {
     display: flex;
     align-items: center;
+    margin: -5% 0%;
 }
 
 #vector {
     position: absolute;
     width: 480px;
     left: 445px;
-    top: 1891px;
+    top: 2020px;
     z-index: -1;
 }
 
@@ -382,7 +408,7 @@ main #banner_left {
     list-style: none;
     justify-content: center;
     gap: 30px;
-    margin-bottom: 100px;
+    margin-bottom: 2%;
 }
 
 .menu .menu_btn {
@@ -409,22 +435,141 @@ main #banner_left {
 .menu .cards_container {
     flex-wrap: wrap;
     text-align: center;
+    gap: 1%;
+    margin-top: -3%;
+}
+
+.menu .food_card {
+    margin-bottom: -4%;
 }
 
 .app {
+    margin-top: 15%;
+    height: 632px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    background: linear-gradient(180deg, transparent, hsla(39, 98%, 68%, 0.1) 73.18%);
+
 }
 
 #app_texture {
     position: absolute;
-    right: -30%;
-    top: 480%;
+    right: -45%;
+    top: 525%;
     z-index: -1;
 }
 
 #app_homem {
-    position: relative;
-    right: -5%;
+    margin-top: -4%;
+    margin-right: -45%;
+    align-self: flex-start;
+}
+
+.app_left {
+    margin-left: 4%;
+}
+
+.app_left h2{
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 67px;
+    margin-bottom: 47px;
+    max-width: 680px;
+}
+
+.app_left p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 42px;
+    max-width: 570px;
+}
+
+.app_left .app_btn {
+    display: flex;
+    gap: 27px;
+}
+
+footer{
+   /* height: 450px;*/
+} 
+
+footer p,  li {
+    color: var(--grey);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    list-style: none;
+    margin-bottom: 14px;
+}
+
+.main_footer {
+    margin: 200px 4% 0 4%;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 20px;
+    margin-bottom: 100px;
+    gap: 5%;
+}
+
+.social_icons{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.footer_div {
+    max-width: 350px;
+}
+
+.footer_div h4 {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 44px;
+    color: var(--red);
+    margin-bottom: 10px;
+}
+
+.footer_div h5{
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 33px;
+    color: var(--red);
+    margin-bottom: 10px;
+}
+
+.footer_div p {
+    margin: 24px 0;
+}
+
+footer > p {
+    text-align: center;
+}
+
+.email_div {
+    display: flex;
+    gap: 15px;
+}
+
+#input_email {
+    height: 50px;
+    background-color: #F0F1EC;
+    border-radius: 38px;
+    border: none;
+    padding: 15px 25px;
+    max-width: 200px;
+}
+
+#input_submit {
+    border: none;
+    cursor: pointer;
+    height: 50px;
+    padding: 15px 25px;
+    border-radius: 38px;
+    color: white;
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 500;
+    background-color: var(--red);
 }
