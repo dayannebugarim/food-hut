@@ -23,7 +23,7 @@
 
 body {
     font-family: var(--sofia);
-    background: linear-gradient(180deg, rgba(245, 71, 72, 0.06) 0%, rgba(245, 71, 72, 0) 100%);
+    /*background: linear-gradient(180deg, rgba(245, 71, 72, 0.06) 0%, rgba(245, 71, 72, 0) 100%);*/
     background-repeat: no-repeat;
     overflow-x: hidden;
 }
@@ -33,11 +33,12 @@ p, span {
 }
 
 header {
-    margin-top: 20px;
+    border: 1px solid black;
+    padding: 1% 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin:32px 4% 0px 4%;
+    text-align: center;
 }
 
 header #logo {
@@ -77,10 +78,16 @@ nav #header_download_btn {
     border-radius: 100px;
 }
 
+.menu_hamburguer {
+    display: none;
+}
+
+/* BANNER */
 main #banner {
     padding-top: 80px;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap-reverse;
 }
 
 #banner_vector {
@@ -91,7 +98,8 @@ main #banner {
 }
 
 main #banner_left {
-    margin-left: 4%;
+    border: 1px solid black;
+    margin-left: 5%;
 }
 
 #banner #ptu {
@@ -99,15 +107,11 @@ main #banner_left {
     display: flex;
     align-items: center;
     gap: 5px;
-    margin: 20px 0px;
-    padding: 5px;
+    margin-bottom: 2%;
+    padding: 1%;
     border-radius: 100px;
     font-size: 0.75em;
     background-color: #f547471a;
-}
-
-#banner #ptu img {
-    width: 18px;
 }
 
 #banner_tittle {
@@ -115,7 +119,7 @@ main #banner_left {
     line-height: 78px;
     font-size: 58px;
     max-width: 600px;
-    margin: 30px 0px;
+    margin: 3% 0%;
     color: var(--grey)
 }
 
@@ -134,19 +138,18 @@ main #banner_left {
     line-height: 32px;
     font-weight: 400;
     color: #191919cc;
-    margin-bottom: 27px;
+    margin-bottom: 7%;
 }
 
 #search {
-    margin-bottom: 34px;
+    margin-bottom: 7%;
     display: flex;
     align-items: center;
 }
 
 #banner #txtsearch {
     width: 470px;
-    height: 54px;
-    padding: 15px 15px 15px 50px;
+    padding: 3% 3% 3% 9%;
     border: solid 0.5px #191919;
     border-radius: 100px;
     font-size: 18px;
@@ -165,14 +168,9 @@ main #banner_left {
 }
 
 #banner #muie {
-    /*max-width: 690px;*/
-    max-height: 910px;
+    max-width: 40%;
     align-self: flex-start;
-    /*position: absolute;
-    top: 0;
-    right: 0;*/
-    z-index: -1;
-    margin-right: 4%;
+    margin-right: 5%;
 }
 
 #texture {
@@ -203,6 +201,7 @@ main #banner_left {
     border-radius: 100%;
 }
 
+/* TODAY SPECIAL OFFERS */
 .offers {
     text-align: center;
     color: var(--grey);
@@ -224,43 +223,43 @@ main #banner_left {
 }
 
 .cards_container {
+    border: 1px solid black;
     display: flex;
-    justify-content: center;
-    margin: 0 10%;
-    gap: 20px;
+    flex-wrap: wrap;
+    padding: 0 10%;
+    gap: 2%;
 }
 
-.cards_container .food_card {
-    max-width: 350px;
+.food_card {
+    max-width: 315px;
     border-radius: 20px;
-    background: linear-gradient(179.69deg, transparent, hsl(360, 90%, 62%, 0.45) 303.75%);
-    padding: 20px;
-    margin: 25% auto 5% auto;
+    background: linear-gradient(179.69deg, transparent 35%, rgba(245, 71, 71, 0.7) 303.75%);
+    margin: 3% auto;
+    padding: 0 1.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .gradient_div{
-    width: 308px;
-    height: 308px;
+    width: 250px;
+    height: 250px;
     background-image: linear-gradient(360deg, rgba(245, 71, 72, 0) 57.72%, #f547472c, #FDC55E);
     border-radius: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: -80%;
 }
 
 .white_div{
-    width: 270px;
-    height: 270px;
+    width: 88%;
+    height: 88%;
     background-image: linear-gradient(360deg, transparent 40%, #fff );
     border-radius: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.food_img img {
-    width: 250px;
 }
 
 .price_circle {
@@ -277,8 +276,8 @@ main #banner_left {
     line-height: 24px;
     border: 4px solid #fff;
     position: relative;
-    top: -33%;
-    left: 68%;
+    top: -18%;
+    left: 25%;
 }
 
 .rating, .food_img {
@@ -289,11 +288,6 @@ main #banner_left {
 .rating{
     margin-top: -60px;
     gap: 5px;
-}
-
-.food_img{
-    /*margin-left: 20px;
-    margin-top: -80%;*/
 }
 
 .people {
@@ -317,22 +311,23 @@ main #banner_left {
 }
 
 .food_card p {
-    margin: 15px 0px 30px 0px;
+    margin: 5% 0% 2% 0%;
     color: var(--grey);
     font-weight: 400;
     font-size: 16px;
     line-height: 21px;
 }
 
-.food_card a {
-    text-decoration: none;
+.food_card button {
+    cursor: pointer;
+    border: none;
     color: white;
     letter-spacing: 0.4px;
     background-color: var(--red);
     padding: 12px;
     border-radius: 100px;
     position: relative;
-    top: 30px;
+    top: 20px;
 }
 
 .about_container {
@@ -393,6 +388,8 @@ main #banner_left {
     width: 26px;
     margin-right: 10px;
 }
+
+/* MENU */
 .menu h2 {
     margin: auto;
     text-align: center;
@@ -433,14 +430,13 @@ main #banner_left {
 }
 
 .menu .cards_container {
-    flex-wrap: wrap;
     text-align: center;
-    gap: 1%;
-    margin-top: -3%;
-}
-
-.menu .food_card {
-    margin-bottom: -4%;
+    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 10%;
+    margin: 0 auto;
+    gap: 2%;
 }
 
 .app {
@@ -491,25 +487,27 @@ main #banner_left {
     gap: 27px;
 }
 
-footer{
-   /* height: 450px;*/
-} 
+/* FOOTER */
+footer ul {
+    margin: 10% 0 25% 0;
+}
 
-footer p,  li {
+footer p, footer li {
     color: var(--grey);
     font-size: 18px;
     font-weight: 400;
     line-height: 24px;
     list-style: none;
-    margin-bottom: 14px;
+    margin-bottom: 10%;
 }
 
 .main_footer {
-    margin: 200px 4% 0 4%;
+    margin: 8% 4% 0 4%;
     display: flex;
     justify-content: space-between;
-    padding: 30px 20px;
-    margin-bottom: 100px;
+    flex-wrap: wrap;
+    padding: 2% 1%;
+    margin-bottom: 5%;
     gap: 5%;
 }
 
@@ -517,6 +515,7 @@ footer p,  li {
     display: flex;
     align-items: center;
     gap: 25px;
+    margin: 7% 0% 10% 0%;
 }
 
 .footer_div {
@@ -528,7 +527,6 @@ footer p,  li {
     font-size: 32px;
     line-height: 44px;
     color: var(--red);
-    margin-bottom: 10px;
 }
 
 .footer_div h5{
@@ -536,20 +534,21 @@ footer p,  li {
     font-size: 24px;
     line-height: 33px;
     color: var(--red);
-    margin-bottom: 10px;
 }
 
 .footer_div p {
-    margin: 24px 0;
+    margin: 5% 0;
 }
 
 footer > p {
     text-align: center;
+    margin-bottom: 1%;
 }
 
 .email_div {
     display: flex;
     gap: 15px;
+    margin-bottom: 5%;
 }
 
 #input_email {
@@ -572,4 +571,21 @@ footer > p {
     line-height: 17px;
     font-weight: 500;
     background-color: var(--red);
+}
+
+@media (max-width: 800px) {
+    nav {
+        display: none;
+    }
+    .menu_hamburguer {
+        display: inline;
+    }
+
+    main #banner {
+        width: 80%;
+    }
+
+    main #banner #muie {
+        width: 900px;
+    }
 }
