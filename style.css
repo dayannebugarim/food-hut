@@ -33,7 +33,6 @@ p, span {
 }
 
 header {
-    border: 1px solid black;
     padding: 1% 5%;
     display: flex;
     justify-content: space-between;
@@ -85,7 +84,28 @@ nav #header_download_btn {
 }
 
 /* BANNER */
+.banner .banner_gradient1 {
+    position: absolute;
+    top: 0%;
+    background: linear-gradient(180deg, rgba(245, 71, 72, 0.06) 0%, rgba(245, 71, 72, 0) 100%);
+    height: 90vh;
+    width: 100vw;
+}
+
+.banner .banner_gradient2 {
+    position: absolute;
+    width: 576.1px;
+    height: 418.78px;
+    left: 965px;
+    top: -99px;
+    z-index: -1;
+
+    background: #FDC55E;
+    filter: blur(900px);
+}
+
 .banner {
+    z-index: 1;
     margin-top: 3%;
     display: flex;
     justify-content: space-between;
@@ -93,13 +113,12 @@ nav #header_download_btn {
 
 #banner_vector {
     position: absolute;
-    top: 9%;
-    left: 14%;
-    height: 170px;
+    top: 8%;
+    left: 15%;
+    width: 7vw;
 }
 
 .banner_left {
-    border: 1px solid black;
     margin-left: 5%;
 }
 
@@ -173,10 +192,9 @@ nav #header_download_btn {
     padding-right: 2%;
 }
 
-.banner_right .muie {
+.banner_right .mulher {
     width: 100%;
     margin-right: 3%;
-    border: 1px solid black;
 }
 
 .banner_right #texture {
@@ -215,7 +233,7 @@ nav #header_download_btn {
 }
 
 .offers h2 {
-    margin: 6% 0% 1% 0%;
+    margin: 7% 0% 1% 0%;
     font-weight: 700;
     font-size: 3rem;
     line-height: 67px;
@@ -230,7 +248,6 @@ nav #header_download_btn {
 }
 
 .cards_container {
-    border: 1px solid black;
     display: flex;
     flex-wrap: wrap;
     padding: 0 10%;
@@ -247,6 +264,7 @@ nav #header_download_btn {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 2%;
 }
 
 .gradient_div{
@@ -345,9 +363,9 @@ nav #header_download_btn {
 
 #vector {
     position: absolute;
-    width: 480px;
-    left: 445px;
-    top: 2020px;
+    min-width: 25vw;
+    left: 25%;
+    top: 207.5%;
     z-index: -1;
 }
 
@@ -357,7 +375,6 @@ nav #header_download_btn {
 
 .about_right {
     margin-left: -5%;
-    border: 1px solid black;
 }
 
 .about_right h2{
@@ -417,29 +434,26 @@ nav #header_download_btn {
 }
 
 .menu .menu_btn {
+    cursor: pointer;
     padding: 10px 20px;
-    border: 2px solid var(--grey);
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 24px;
     border-radius: 100px;
-    color: var(--grey);
-    text-decoration: none;
+    background-color: transparent;
+    border: 2px solid var(--grey);
+    font-size: 1.1rem;
+    opacity: 0.6;
 }
 
 #red_btn {
-    text-decoration: none;
     color: white;
     letter-spacing: 0.4px;
     background-color: var(--red);
-    padding: 12px;
+    border: 2px solid var(--red);
     border-radius: 100px;
-    border: none;
+    opacity: 1;
 }
 
 .menu .cards_container {
     text-align: center;
-    border: 1px solid black;
     display: flex;
     flex-wrap: wrap;
     padding: 0 10%;
@@ -453,7 +467,6 @@ nav #header_download_btn {
     justify-content: space-between;
     align-items: center;
     background: linear-gradient(180deg, transparent, hsla(39, 98%, 68%, 0.1) 73.18%);
-    border: 1px solid black;
 }
 
 #app_texture {
@@ -468,7 +481,6 @@ nav #header_download_btn {
     margin-right: -4%;
     margin-bottom: -4.5%;
     width: 40%;
-    border: 1px solid black;
 }
 
 .app_left {
@@ -481,7 +493,6 @@ nav #header_download_btn {
     line-height: 67px;
     margin-bottom: 5%;
     max-width: 60%;
-    border: 1px solid black;
 }
 
 .app_left p {
@@ -490,7 +501,6 @@ nav #header_download_btn {
     line-height: 24px;
     margin-bottom: 4%;
     max-width: 50%;
-    border: 1px solid black;
 }
 
 .app_left .app_btn {
@@ -596,6 +606,10 @@ footer > p {
         display: inline;
     }
 
+    #banner_vector {
+        display: none;
+    }
+
     main .banner {
         width: 80%;
         flex-wrap: wrap-reverse;
@@ -614,17 +628,41 @@ footer > p {
         width: 85vw;
     }
 
-    main .banner .muie {
+    main .banner .mulher {
         margin: 0% 5% 2% 5%;
         min-width: 90vw !important;
+    }
+
+    .banner_right #mulher1 {
+        display: none;
+    }
+
+    .banner_right #mulher2 {
+        display: none;
+        /*margin: 0% 5% 2% 5%;
+        min-width: 90vw !important;
+        height: 70vh;
+        z-index: 3;*/
+    }
+
+    .banner_right #texture {
+        display: none;
+    }
+
+    .offers h2 {
+        margin-top: 25%;
+        padding: 0 2%;
     }
 
     .offers #offers_p {
         max-width: 85vw !important;
         margin-bottom: 5%;
     }
+    .food_card{
+        margin-bottom: 7%;
+    }
 
-    .offers .cards_container:nth-child(-n+4) {
+    .offers .cards_container .food_card:nth-child(n+2) {
         display: none;
     }
 
@@ -632,7 +670,12 @@ footer > p {
         flex-wrap: wrap;
     }
 
+    #vector {
+        display: none;
+    }
+
     .about_container #img_cozinheiro{
+        margin-top: -25%;
         min-width: 130vw !important;
     }
 
@@ -647,7 +690,7 @@ footer > p {
 
     .about_right p {
         max-width: 80vw;
-        margin-bottom: 15%;
+        margin-bottom: 10%;
     }
 
     .about_right ul {
@@ -660,6 +703,15 @@ footer > p {
 
     .menu h2 {
         max-width: 80vw;
+        margin-top: 20%;
+    }
+
+    .menu ul li:nth-child(n+4) {
+        display: none;
+    }
+
+    .menu .cards_container .food_card:nth-child(n+2) {
+        display: none;
     }
 
     .app {
@@ -670,6 +722,10 @@ footer > p {
         min-width: 90vw !important;
         margin-bottom: 5%;
         margin-left: 8%;
+    }
+
+    #app_texture {
+        display: none;
     }
 
     .app_left h2{
