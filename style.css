@@ -139,7 +139,7 @@ nav #header_download_btn {
     font-size: 4rem;
     max-width: 40vw;
     margin: 3% 0%;
-    color: var(--grey)
+    color: var(--grey);
 }
 
 .red_txt {
@@ -194,6 +194,10 @@ nav #header_download_btn {
 .banner_right .mulher {
     width: 100%;
     margin-right: 3%;
+}
+
+.banner_right #mulher2 {
+    display: none;
 }
 
 .banner_right #texture {
@@ -364,8 +368,8 @@ nav #header_download_btn {
 #vector {
     position: absolute;
     min-width: 25vw;
-    left: 25%;
-    top: 207.5%;
+    left: 24.5%;
+    top: 194.43%;
     z-index: -1;
 }
 
@@ -639,11 +643,8 @@ footer > p {
     }
 
     .banner_right #mulher2 {
-        display: none;
-        /*margin: 0% 5% 2% 5%;
-        min-width: 90vw !important;
-        height: 70vh;
-        z-index: 3;*/
+        display: block;
+        margin-bottom: 10%;
     }
 
     .banner_right #texture {
@@ -696,6 +697,7 @@ footer > p {
 
     .about_right ul {
         columns: 1;
+        max-width: 70vw;
     }
 
     .about_right li {
